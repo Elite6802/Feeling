@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My_web</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <style>
+.heart {
+  position: fixed;
+  top: -1vh;
+  font-size : 2rem;
+  transform: translateY(0);
+  animation: fall 0s linear forwards;
+}
+
+@keyframes fall {
+  to {
+	transform: translateY(150vh);
+  }
+}
+body {
+   background:linear-gradient(to left,pink,violet,pink,violet);
+	
+	
+}
+   
+
+h1{
+	color:Red;
+	text-shadow:4px 3px 2px purple;
+	font-size:50px;
+}
+p{
+	color:purple;
+	text-shadow:4px 3px 2px fuscia;
+	font-size:35px;
+}
+
+#Niv{
+	position:relative;
+	font-size:3em;
+	letter-spacing:15px;
+	color:#0e3742;
+	text-transform:uppercase;
+	width:100%;
+	text-align:center;
+	-webkit-box-reflect:below1px linear-gradient(transparent,#0008)
+	line-height:0.70em;
+	outline:none;
+	animation:animate 3s linear infinite;
+	font:cursive;
+	text-align:bottom;
+}
+@keyframes animate
+{
+	0% 
+	{
+		color:violet;
+		text-shadow:4px 3px 2px red;
+	} 
+	100%
+		{
+		 color: Purple;
+		  text-shadow:0 0 10px aqua;
+			0 0 20px aqua,
+			0 0 40px aqua ,
+			0 0 80px aqua,
+			0 0 160px aqua;
+}
+
+{
+	0%
+	{
+		background-position:0% 50%;
+	
+	}
+	50%{
+		background-position:100% 50%;
+	}
+	100%{
+		background-position:0% 50%;
+	}
+
+}
+</style>
+	</head>
+	<body><h1> <marquee> <font face="cursive">💕To my Babe💕</font></marquee></h1>
+	   <p> 
+	<font face="cursive">One side love is so beautiful ❤️
+I Just look at my Babe Jabin and smile💕
+This wonderful feeling is enough for me...</font></p>
+	<p id="Niv"><marquee direction="right">💗I LOVE YOU💗</marquee></p>
+	<script>
+	 
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.innerText = "💗";
+  //heart.innerText="💦";
+  heart.style.animationDuration = Math.random() * 4+7+"s";
+  
+  document.body.appendChild(heart);
+  
+  setTimeout(() => {
+	heart.remove();
+  }, 5000);
+}
+
+setInterval(createHeart,1000);
+
+/*alert("Its been created by Kelvin earlier 💗🤠,but i made a little bit edition in this code....and added my point of view also towards it💗")*/
+	</script>
+	</body>
+	
+</html>
